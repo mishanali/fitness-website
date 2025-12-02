@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@theme{
+    --breakpoint-custom: 992px;
+    --breakpoint-custom-2: 1280px;
+    --breakpoint-xs: 639px;
+    --breakpoint-xss: 475px;
+    --color-primary: #4c00ff;
+    --color-secondary: #2c2c2c;
+
+}
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px #69696926; /* outline color & opacity */
+}
+
+.text-outline-blue {
+  color: transparent;
+  -webkit-text-stroke: 2px #377ef0ab; /* outline color & opacity */
+}
+
+/* Input CSS File */
+/* 1. Font Face Definition */
+@font-face {
+    font-family: 'Mona Sans Display';
+    src: url('path/to/MonaSans-ExtraBold.woff2') format('woff2');
+    font-weight: bolder;
+    font-display: swap;
+}
+
+/* 2. Custom Utility Class Banana */
+/* Agar aapko sirf headings par yeh font lagana hai */
+.font-display {
+    /* Mona Sans ko pehle rakha, Impact standard fallback hai */
+    font-family: 'Mona Sans Display', Impact, sans-serif !important; 
+}
+
+/* 3. Ya Tailwind ki default 'sans' class ko override karna */
+.font-sans {
+    font-family: 'Mona Sans Display', Impact, sans-serif !important;
+}
+
+
+.scroll-container {
+    display: flex;
+    width: max-content;
+  }
+
+  @keyframes scrollText {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scrollText {
+    animation: scrollText 18s linear infinite;
+  }
